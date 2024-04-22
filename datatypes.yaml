@@ -1,0 +1,31 @@
+- name: datatypes in ansible
+  hosts: localhost
+  vars:
+    NAME: nanda
+    SKILLS: 
+        - Manual Testing
+        - Automation Testing
+        - SCURM
+        - React
+    Experience:
+        Manual Testing: 11
+        Automation Testing: 12
+  tasks:
+    - name: printing data types
+      ansible.builtin.debug:
+        msg: "variable is {{NAME}}"
+
+    - name: printing list
+      ansible.builtin.debug:
+        msg: "lists skills {{SKILLS}}"
+    - name: printing maps
+      ansible.builtin.debug:
+        msg: "map values are {{Experience}}"
+    
+    
+       
+    
+
+
+
+  
