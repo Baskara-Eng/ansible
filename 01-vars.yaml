@@ -1,9 +1,7 @@
 - name: ansible variables
   hosts: localhost
-  vars:
-    empId: "12343"  
-    empname: "Nanda"
-    company: "google"
+  vars_files:
+    - variables.yaml
   tasks:
    - name: printing variables
      ansible.builtin.debug:
