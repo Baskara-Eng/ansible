@@ -11,3 +11,17 @@
     
 
 
+- name: overriding variables
+  hosts: localhost
+  vars:
+    empId: "12343"  
+    empname: "Nanda"
+    company: "google"
+  tasks:
+    - name: local variables
+      vars:
+        company: "microsoft"
+      ansible.builtin.debug:
+        msg: "Hi your {{empId}} is and your name is {{empname}} and the companyname is {{company}}"
+
+        
