@@ -1,0 +1,6 @@
+- name: variables from inventory
+  hosts: localhost
+  tasks:
+   - name: inventory variables
+     ansible.builtin.debug:
+      msg: "Hi Yourname is {{empname}} your empid is {{empId}} your company name is {{company}}"
